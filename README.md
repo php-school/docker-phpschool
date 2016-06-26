@@ -8,12 +8,8 @@ To start you may execute these commands in the Docker image folder.
 
     docker build -t phpschool .
     
-**2. Create the container.**
+**2. Run a container.**
   
-    docker run -i -t -d -P phpschool
+    docker run -i -t phpschool bash
     
-**3. Enter in container.**
-
-  
-    docker run -i -t -d -P phpschool
        

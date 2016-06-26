@@ -1,8 +1,10 @@
 #
 # PHPSChool.io
+# A revolutionary new way to learn PHP.
+# Bring your imagination to life in an open learning eco-system.
 #
 
-FROM php:5.6-apache
+FROM php:7-cli
 MAINTAINER Rafael Corrêa Gomes <rafaelcg_stz@hotmail.com>
 
 RUN apt-get update \
@@ -14,10 +16,20 @@ RUN apt-get update \
 # Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+RUN mkdir /phpschool
+
 # Learn You PHP!
-#RUN composer global require php-school/learn-you-php:~0.1
+RUN mkdir /phpschool/learnyouphp \
+    && cd /phpschool/learnyouphp \
+    && composer init -q -n \
+    && composer require php-school/learn-you-php
 
 # Callable Functions
-#RUN composer global require nastasia/callable-functions:^0.3
+RUN mkdir /phpschool/callablefunctions \
+    && cd /phpschool/callablefunctions \
+    && composer init -q -n \
+    && composer require nastasia/callable-functions
 
-CMD ["apache2-foreground", "-DFOREGROUND"]
+WORKDIR /phpschool
+
+CMD ["php", "-a"]
