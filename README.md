@@ -8,21 +8,23 @@
 **1. Run a container with phpschool.**
   
     
-    docker run -i -t -v /<DIRECTORY-ON-YOUR-MACHINE>:/phpschool/:rw rafaelcgstz/phpschool bash
+    docker run -i -t -v /<DIRECTORY-YOUR-MACHINE>:/phpschool/code:rw rafaelcgstz/phpschool bash
     
 
 **2. To verify your code.** 
 	
-	In the docker container - navigate to /phpschool
+    In the docker container - navigate to /phpschool
 
-	learnyouphp verify <name-of-solution-file>
+    learnyouphp verify <name-of-solution-file>
 
     
     
 # Advanced 
 
-This creates a docker container with the learnyouphp, Callable functions workshops and the workshop manager.
+This creates a docker container with the learnyouphp, callable-functions workshops and the workshop manager.
 
-docker build -t phpschool .
 
-Contributions welcome.
+    docker build -t phpschool .
+    
+    
+# Contributions welcome!    
