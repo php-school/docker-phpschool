@@ -8,7 +8,7 @@
 **1. Run a container with phpschool.**
   
     
-    docker run -i -t -v /<DIRECTORY-YOUR-MACHINE>:/phpschool/:rw rafaelcgstz/phpschool bash
+    docker run -i -t -v /<DIRECTORY-ON-YOUR-MACHINE>:/phpschool/:rw rafaelcgstz/phpschool bash
     
 
 **2. To verify your code.** 
