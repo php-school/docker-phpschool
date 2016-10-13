@@ -45,4 +45,7 @@ RUN mkdir /phpschool/workshop-manager \
 
 WORKDIR /phpschool
 
+
+
+
 CMD ["php", "-a"]
