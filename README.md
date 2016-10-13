@@ -2,16 +2,27 @@
 
 ![PHPSchool.io](https://avatars1.githubusercontent.com/u/14904751?v=3&s=200)
 
-Creates a docker container with the learnyouphp, Callable functions workshops and the workshop manager.
 
-To start you may execute these commands in the Docker image folder.
 
-**1. Build the image.**
-
-    docker build -t phpschool .
     
-**2. Run a container.**
+**1. Run a container with phpschool.**
   
-    docker run -i -t phpschool bash
     
-       
+    docker run -i -t -v /<DIRECTORY-YOUR-MACHINE>:/phpschool/:rw rafaelcgstz/phpschool bash
+    
+
+**2. To verify your code. ** 
+	
+	In the docker container - navigate to /phpschool
+
+	learnyouphp verify <name-of-solution-file>
+
+    
+    
+Advanced 
+
+This creates a docker container with the learnyouphp, Callable functions workshops and the workshop manager.
+
+docker build -t phpschool .
+
+Contributions welcome.
