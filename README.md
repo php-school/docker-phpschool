@@ -27,4 +27,19 @@ This creates a docker container with the learnyouphp, callable-functions worksho
     docker build -t phpschool .
     
     
+# docker-compose.yml (example)   
+
+This creates the docker container with the learnyouphp, callable-functions workshops and the workshop manager. Create the docker-compose.yml file in your project dir and run "docker-compose up -d".
+    
+    version: '2'
+      services:
+        phpschool:
+      build: ./
+      volumes:
+        - /path/to/phpSchool/projectfiles:/phpschool/projectfiles:rw
+      #restart: always
+      environment:
+        - TERM=xterm
+      command: tail -f /dev/null
+   
 # Contributions welcome!    
