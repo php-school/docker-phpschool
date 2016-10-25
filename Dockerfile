@@ -24,17 +24,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 RUN mkdir /phpschool
 
-# Learn You PHP!
-RUN mkdir /phpschool/learnyouphp \
-    && cd /phpschool/learnyouphp \
-    && composer init -q -n \
-    && composer require php-school/learn-you-php
-
-# Callable Functions
-RUN mkdir /phpschool/callablefunctions \
-    && cd /phpschool/callablefunctions \
-    && composer init -q -n \
-    && composer require nastasia/callable-functions
 
 # Workshop manager 
 RUN mkdir /phpschool/workshop-manager \
@@ -47,6 +36,14 @@ WORKDIR /phpschool
 
 ENV PATH /phpschool/:$PATH
 ENV PATH /root/.php-school/bin:$PATH
+
+# Learn You PHP!
+RUN workshop-manager install learnyouphp \
+    
+
+# Callable Functions
+RUN workshop-manager install callablefunctions 
+
 
 
 CMD ["bash"]
