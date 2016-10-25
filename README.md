@@ -11,7 +11,7 @@
   
 ```bash
 
-  docker run -i -t -v <DIRECTORY-YOUR-MACHINE>:/phpschool/code:rw rafaelcgstz/phpschool bash
+  docker run -i -t -v ~/Dropbox/docker-phpschool:/phpschool/code:rw -e "PATH=/root/.php-school/bin:$PATH" rafaelcgstz/phpschool bash
 
 ```
 
