@@ -38,7 +38,7 @@ ENV PATH /phpschool/:$PATH
 ENV PATH /root/.php-school/bin:$PATH
 
 # Learn You PHP!
-RUN workshop-manager install learnyouphp \
+RUN workshop-manager install learnyouphp 
     
 
 # Callable Functions
