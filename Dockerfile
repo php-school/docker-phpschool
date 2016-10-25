@@ -24,6 +24,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 RUN mkdir /phpschool
 
+ENV PATH /root/.php-school/bin/:/phpschool/:$PATH
 
 # Workshop manager 
 RUN mkdir /phpschool/workshop-manager \
@@ -35,8 +36,8 @@ RUN mkdir /phpschool/workshop-manager \
 
 WORKDIR /phpschool
 
-ENV PATH /phpschool/:$PATH
-ENV PATH /root/.php-school/bin:$PATH
+
+
 
 # Learn You PHP!
 RUN workshop-manager install learnyouphp 
