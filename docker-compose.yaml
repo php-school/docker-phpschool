@@ -1,0 +1,9 @@
+version: '2'
+services:
+ phpschool:
+   build: ./
+   volumes:
+     - .:/phpschool/projectfiles:rw
+   #restart: always
+   environment:
+       - TERM=xterm

@@ -45,7 +45,8 @@ RUN mkdir /phpschool/workshop-manager \
 
 WORKDIR /phpschool
 
+ENV PATH /phpschool/:$PATH
+ENV PATH /root/.php-school/bin:$PATH
 
 
-
-CMD ["php", "-a"]
+CMD ["bash"]
