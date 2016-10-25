@@ -16,7 +16,7 @@
 	
 In the docker container, navigate to `/phpschool` folder.
 
-
+```bash
   learnyouphp verify <name-of-solution-file>
 
 ```
