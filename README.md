@@ -35,5 +35,9 @@ This creates a docker container with the `learnyouphp`, Callable functions works
   docker build -t phpschool .  
 
 ```
+This runs the phpschool from the compose file 
 
+```bash
+   docker-compose run phpschool
+```
 Contributions welcome.
