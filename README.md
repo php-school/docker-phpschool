@@ -28,16 +28,18 @@ In the docker container, navigate to `/phpschool` folder.
     
 **3. Advanced**
 
-This creates a docker container with the `learnyouphp`, Callable functions workshops and the workshop manager.
+This creates a docker container with the `learnyouphp`, `Callablefunctions` workshops and the `workshop-manager`.
 
 ```bash
 
   docker build -t phpschool .  
 
 ```
-This runs the phpschool from the compose file 
+This runs the phpschool in interactive mode from the included compose file 
 
 ```bash
    docker-compose run phpschool
 ```
+
+
 Contributions welcome.
