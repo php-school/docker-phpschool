@@ -17,11 +17,11 @@ Everything in the `code` directory will be mounted inside the Docker container a
 
 Head on over to [Docker](https://www.docker.com/products/docker) and download the latest version for your OS.
 
-### Special Windows Instructions...
+#### Special Windows Instructions...
 
 Older Windows users may require [Docker Toolbox](https://www.docker.com/products/docker-toolbox) instead.
 
-You will also need a better terminal capable of handling ANSI escape which we recommend [ConEmu](https://github.com/Maximus5/ConEmu/releases)
+You will also need a better terminal capable of handling ANSI escape sequences, we recommend [ConEmu](https://github.com/Maximus5/ConEmu/releases)
 
 ## Downloading the Docker Image
 
@@ -35,23 +35,28 @@ Alternatively you can [download the files directly](https://github.com/php-schoo
 
 ## Starting the Docker Image
 
-### Special Windows Instructions...
+Ensure your in your terminal and navigated to the directory of the files you just pulled down using the `cd` command.
+
+#### Special Windows Instructions...
 
 Booting up ConEmu you will be able to configure the environment (startup tasks in the settings menu). With Docker installed it should provide that as a predefined task, you just need to make that the default task for new consoles.
 
 ![ConEmu Example](https://cloud.githubusercontent.com/assets/2174476/19818040/f702e730-9d45-11e6-8514-b0f7801d0f08.png)
 
-### Back to Starting the Image
+You will also likely need to have the container up and running before you can interact with it using Docker (not Docker Compose) as Docker Compose does not yet support interactive commands :disappointed:
 
-Ensure your in your terminal and navigated to the directory of the files you just pulled down using the `cd` command.
-
-From here simply run `docker-compose up -d` to start the Docker image.
+To do this simply remember to run `docker-compose up -d` before trying to interact with the workshops.
 
 ## Starting a Workshop
 
 We've pre-installed a few Workshops for you and you can install more using the [Workshop Manager](https://github.com/php-school/workshop-manager) which is also pre-installed.
 
-To start a workshop you will need to interact directly with the Docker container, you should do this with the command `docker-compose run phpschool`
+To start a workshop you will need to interact directly with the Docker container, you should do this with the command below depending on your system
+
+Unix: `docker-compose run phpschool bash`
+Windows: `docker exec -it phpschool bash`
+
+_Note: This the Windows command above is for those who had to run `docker-compose up -d` beforehand_
 
 This will put you inside a new bash prompt interacting directly with the PHP School Docker container.
 
@@ -71,10 +76,10 @@ The source is built and pushed to Docker Hub automatically and will thus always 
 
 ### Building the Image
 
-Using Docker you can build the image running, this will include any modifications you make to your local Dockerfile. 
+Using Docker Compose you can build the image running, this will include any modifications you make to your local Dockerfile.
 
 ```bash
-docker build -t phpschool .  
+docker-compose build phpschool
 ```
 
 ---
