@@ -3,6 +3,6 @@ services:
   phpschool:
     build: ./
     volumes:
-      - .:/phpschool/projectfiles:rw
+      - ./code:/phpschool/code:rw
     environment:
       TERM: xterm
