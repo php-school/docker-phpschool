@@ -7,9 +7,9 @@
 
 # Getting Started
 
-This process will provide you with a Docker environment where you can quickly run PHP School Workshops. We've gone ahead and pre-installeda few for you such as `learnyouphp`!
+This process will provide you with a Docker environment where you can quickly run PHP School Workshops. We've gone ahead and pre-installed a few for you such as `learnyouphp`!
 
-Once you get it up and running complete your tasks inside the `code` directory and use an editor such as [Atom](https://atom.io/) to write them.
+Once you get it up and running you should complete your tasks inside the `code` directory and use an editor such as [Atom](https://atom.io/) to write them.
 
 Everything in the `code` directory will be mounted inside the Docker container at `/phpschool/code` so you can navigate there using the `cd` command and verify your solutions!
 
@@ -53,10 +53,10 @@ We've pre-installed a few Workshops for you and you can install more using the [
 
 To start a workshop you will need to interact directly with the Docker container, you should do this with the command below depending on your system
 
-Unix: `docker-compose run phpschool bash`
-Windows: `docker exec -it phpschool bash`
+- Unix: `docker-compose run phpschool bash`
+- Windows: `docker exec -it phpschool bash`
 
-_Note: This the Windows command above is for those who had to run `docker-compose up -d` beforehand_
+_Note: The Windows command above is for those who had to run `docker-compose up -d` beforehand_
 
 This will put you inside a new bash prompt interacting directly with the PHP School Docker container.
 
@@ -76,7 +76,7 @@ The source is built and pushed to Docker Hub automatically and will thus always 
 
 ### Building the Image
 
-Using Docker Compose you can build the image running, this will include any modifications you make to your local Dockerfile.
+Using Docker Compose you can build the image, this will include any modifications you make to your local Dockerfile.
 
 ```bash
 docker-compose build phpschool
