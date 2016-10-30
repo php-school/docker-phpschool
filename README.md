@@ -13,13 +13,23 @@ Once you get it up and running you should complete your tasks inside the `code` 
 
 Everything in the `code` directory will be mounted inside the Docker container at `/phpschool/code` so you can navigate there using the `cd` command and verify your solutions!
 
+For example if your working on the Learn You PHP workshop you may do your first exercise `Hello World` inside a `learnyouphp` directory. Your verification process would be something like this.
+
+```bash
+cd code/learnyouphp
+
+learnyouphp verify hello-world.php
+```
+
 ## Docker Installation
 
 Head on over to [Docker](https://www.docker.com/products/docker) and download the latest version for your OS.
 
+Older Windows users running less than `Windows 10 Professional or Enterprise 64bit Build 10586` will need to also follow the Special Windows Instructions throughout this process.
+
 #### Special Windows Instructions...
 
-Older Windows users may require [Docker Toolbox](https://www.docker.com/products/docker-toolbox) instead.
+Older Windows users will require [Docker Toolbox](https://www.docker.com/products/docker-toolbox) instead.
 
 You will also need a better terminal capable of handling ANSI escape sequences, we recommend [ConEmu](https://github.com/Maximus5/ConEmu/releases)
 
@@ -29,17 +39,29 @@ We recommend pulling this project down for the easiest way of getting started.
 
 You can do this in two different ways, either with `git` or manual download.
 
-With `git` just run `git clone git@github.com:php-school/docker-phpschool.git`
+With `git` just run
 
-Alternatively you can [download the files directly](https://github.com/php-school/docker-phpschool/archive/master.zip) and unzip them.
+```bash
+git clone git@github.com:php-school/docker-phpschool.git && cd docker-phpschool
+```
+
+Alternatively you can [download the files directly](https://github.com/php-school/docker-phpschool/archive/master.zip) and unzip them manually or run the command below to do it all in one.
+
+```bash
+curl -LOk https://github.com/php-school/docker-phpschool/archive/master.zip && unzip master.zip && cd docker-phpschool-master
+```
 
 ## Starting the Docker Image
 
-Ensure your in your terminal and navigated to the directory of the files you just pulled down using the `cd` command.
+Ensure you're in your terminal and have navigated to the directory of the files you just pulled down using the `cd` command. If you ran one of the download commands above then you're already there otherwise if you manually downloaded the files and unzipped them you will need to run the command below replacing `<path/to/download/folder>` with the download path for your OS.
+
+```bash
+cd <path/to/download/folder>/docker-phpschool-master
+```
 
 #### Special Windows Instructions...
 
-Booting up ConEmu you will be able to configure the environment (startup tasks in the settings menu). With Docker installed it should provide that as a predefined task, you just need to make that the default task for new consoles.
+To use Docker with ConEmu you will need to configure the environment correctly, this is done in the startup tasks inside the settings menu. As you've installed Docker it should provide that as a predefined task, which you will need to set as the default task for new consoles as shown in the screenshot below. This simply ensures new consoles boot with the correct environment for working with Docker :tada:
 
 ![ConEmu Example](https://cloud.githubusercontent.com/assets/2174476/19818040/f702e730-9d45-11e6-8514-b0f7801d0f08.png)
 
@@ -58,7 +80,11 @@ To start a workshop you will need to interact directly with the Docker container
 
 _Note: The Windows command above is for those who had to run `docker-compose up -d` beforehand_
 
-This will put you inside a new bash prompt interacting directly with the PHP School Docker container.
+This will put you inside a new bash prompt interacting directly with the PHP School Docker container, from this point forwards you can start your interactive learning by running one of the pre-installed workshops e.g.
+
+```bash
+learnyouphp
+```
 
 ---
 
