@@ -2,7 +2,7 @@ version: '2'
 services:
   phpschool:
     container_name: phpschool
-    build: ./
+    build: .
     volumes:
       - ./code:/phpschool/code:rw
     environment:
