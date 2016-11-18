@@ -3,6 +3,8 @@
   <a href="https://www.phpschool.io/">
     <img alt="PHPSchool.io" src="https://avatars1.githubusercontent.com/u/14904751?v=3&s=200">
   </a>
+  <br>
+  <img src="https://travis-ci.org/php-school/docker-phpschool.svg?branch=master" alt="Travis CI">
 </p>
 
 # Getting Started
